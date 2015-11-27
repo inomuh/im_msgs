@@ -11,7 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   trajectory_msgs
   visualization_msgs
+  message_generation
 )
+
 
 
 ## Generate messages in the 'msg' folder
@@ -19,13 +21,21 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    BumperState.msg
    Bumper.msg
+   Voltage.msg
+   Battery.msg
  )
+ 
+add_service_files(
+  FILES
+  SetRGB.srv
+)
 
 
  generate_messages(
    DEPENDENCIES
    geometry_msgs   nav_msgs   sensor_msgs   std_msgs   trajectory_msgs   visualization_msgs
  )
+
 
 catkin_package(
 #  INCLUDE_DIRS include
@@ -38,4 +48,3 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
-
