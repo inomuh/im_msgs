@@ -25,6 +25,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
   FILES
   SetRGB.srv
+  AddObject.srv
+  CheckObject.srv
 )
 
  generate_messages(
