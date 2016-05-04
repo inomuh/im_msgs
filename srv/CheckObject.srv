@@ -1,0 +1,11 @@
+# COLORS
+int8 RED   = 0
+int8 GREEN = 1
+int8 BLUE  = 2
+
+geometry_msgs/Point object_pose
+int8 color
+---
+bool ret
+float32 remaining_time
+int8 achieved
